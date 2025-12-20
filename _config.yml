@@ -22,4 +22,4 @@ url: "https://dogru-isim.github.io"
 baseurl: ""
 
 minima:
-    skin: dark       # auto | classic | dark | solarized
+    skin: auto       # auto | classic | dark | solarized
