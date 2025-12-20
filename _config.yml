@@ -1,6 +1,7 @@
 title: Pirate's Life
 description: >-
   A wannabe hacker's diary.
+
 author:
   By Ad0n
 
@@ -10,7 +11,12 @@ social:
     - https://github.com/Dogru-Isim/
     - https://app.hackthebox.com/users/535825
 
-theme: jekyll-theme-minima
+remote_theme: jekyll/minima
+
+# Minima requires the following plugins:
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 url: "https://dogru-isim.github.io"
 baseurl: ""
