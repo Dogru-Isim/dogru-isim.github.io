@@ -10,7 +10,7 @@ social:
     - https://github.com/Dogru-Isim/
     - https://app.hackthebox.com/users/535825
 
-theme: minima
+theme: jekyll-theme-minima
 
 url: "https://dogru-isim.github.io"
 baseurl: ""
