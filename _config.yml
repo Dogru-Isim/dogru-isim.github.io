@@ -1,10 +1,7 @@
-#remote_theme: "jekyll/minima@1e8a445"
-theme: minima
-title: My Awesome Site
-
-title: A Pirate's Life
-description: >-
+title: Pirate's Life
+description: >- Description
   A cyber security enthusiast's corner of the web where he shares his experiences and thoughts to connect with others.
+  A wannabe hacker's corner of the web
 author:
   name: Ad0n
 
@@ -14,7 +11,7 @@ url: "https://dogru-isim.github.io"
 baseurl: ""
 
 minima:
-skin: dark        # auto | classic | dark | solarized
+skin: solarized       # auto | classic | dark | solarized
 social_links:
   github: https://github.com/Dogru-Isim/
   hackthebox: https://app.hackthebox.com/users/535825
