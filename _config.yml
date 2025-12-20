@@ -33,6 +33,7 @@ social:
     - https://app.hackthebox.com/users/535825
 
 #remote_theme: jekyll/minima
+
 theme: minima
 
 # Minima requires the following plugins:
