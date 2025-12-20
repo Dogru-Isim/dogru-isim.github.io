@@ -4,9 +4,10 @@ description: >-
   A wannabe hacker's corner of the web
 author:
   By Ad0n
-  social_links:
-    github: https://github.com/Dogru-Isim/
-    hackthebox: https://app.hackthebox.com/users/535825
+
+social_links:
+  github: https://github.com/Dogru-Isim/
+  hackthebox: https://app.hackthebox.com/users/535825
 
 theme: minima
 
