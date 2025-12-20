@@ -12,11 +12,11 @@ minima:
 
    social_links:
       - title: HackTheBox
-       icon: hackthebox
-       url: "https://app.hackthebox.com/users/535825"
+        icon: hackthebox
+        url: "https://app.hackthebox.com/users/535825"
       - title: Github
-       icon: github
-       url: "https://github.com/Dogru-Isim"
+        icon: github
+        url: "https://github.com/Dogru-Isim"
 
 title: Pirate's Life
 
