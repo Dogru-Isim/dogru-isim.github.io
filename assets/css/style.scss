@@ -3,17 +3,17 @@
   gap: 2rem;
 }
 
+/*
 .footer-col:last-child {
   text-align: right;
 }
+*/
 
-/* Move all the way to the right
 .footer-col:last-child {
   flex: 0 0 auto;
   margin-left: auto;
   text-align: right;
 }
-*/
 
 .footer-col {
   font-size: 0.9rem;
