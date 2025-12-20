@@ -1,7 +1,6 @@
 title: Pirate's Life
 description: >-
-  A cyber security enthusiast's corner of the web where he shares his experiences and thoughts to connect with others.
-  A wannabe hacker's corner of the web
+  A wannabe hacker's corner of the web.
 author:
   By Ad0n
 
@@ -15,4 +14,4 @@ url: "https://dogru-isim.github.io"
 baseurl: ""
 
 minima:
-skin: solarized       # auto | classic | dark | solarized
+    skin: dark       # auto | classic | dark | solarized
