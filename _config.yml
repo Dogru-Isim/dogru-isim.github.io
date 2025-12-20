@@ -3,7 +3,10 @@ description: >-
   A cyber security enthusiast's corner of the web where he shares his experiences and thoughts to connect with others.
   A wannabe hacker's corner of the web
 author:
-  name:Ad0n
+  By Ad0n
+  social_links:
+    github: https://github.com/Dogru-Isim/
+    hackthebox: https://app.hackthebox.com/users/535825
 
 theme: minima
 
@@ -12,6 +15,3 @@ baseurl: ""
 
 minima:
 skin: solarized       # auto | classic | dark | solarized
-social_links:
-  github: https://github.com/Dogru-Isim/
-  hackthebox: https://app.hackthebox.com/users/535825
