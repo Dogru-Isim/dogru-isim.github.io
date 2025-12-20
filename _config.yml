@@ -6,12 +6,9 @@ author:
 
 social:
   name: Ad0n
-  - title: GitHub aka. a repository of unfinished projects
-    icon: github
-    url: "https://github.com/Dogru-Isim/"
-  - title: HackTheBox
-    icon: hackthebox
-    url: "https://app.hackthebox.com/users/535825"
+  links:
+    - "https://github.com/Dogru-Isim/"
+    - "https://app.hackthebox.com/users/535825"
 
 theme: minima
 
