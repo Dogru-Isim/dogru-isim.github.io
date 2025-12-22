@@ -5,7 +5,12 @@ date: 2025-12-22
 categories: articles
 ---
 
-# CSRF:
+# Path Traversal
+
+[Traversal-resistant File](https://go.dev/blog/osroot) APIs by Damien Neil<br>
+How to cause path traversal and how to defend against them<br>
+
+# CSRF
 
 ## Grafana
 
