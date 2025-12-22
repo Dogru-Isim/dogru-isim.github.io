@@ -1,0 +1,79 @@
+---
+layout: post
+title: "Index of Writeups"
+date: 2025-12-22
+categories: articles
+---
+
+# CSRF:
+
+## Grafana
+
+https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/
+
+
+
+Key points:
+
+1. Grafana doesn't support CORS
+
+2. Grafana admins might set `cookie_samesite` to `none` because of point 1.
+
+3. Safari doesn't set SameSite to Lax unlike other browsers
+
+4. attacker.example.com exploit CSRF on victim.example.com even with SameSite set
+
+5. Browsers perform `CORS preflight` to determine CORS settings for some requests
+
+6. A request with `Content-Type: application/json` is enough to trigger point 6.
+   
+   
+   
+   ROOT CAUSE: CORS is triggered if the "essence" of the MIME type is:
+   
+   - `application/x-www-form-urlencoded`,
+   - `multipart/form-data`, or
+   - `text/plain`
+   
+   BUT, if the server checks the MIME type poorly, it can interpret `text/plain; application/json` as a JSON MIME type.
+   
+   The poor MIME type check:
+
+```go
+func bind(ctx *macaron.Context, obj interface{}, ifacePtr ...interface{}) {
+  contentType := ctx.Req.Header.Get("Content-Type")
+  if ctx.Req.Method == "POST" || ctx.Req.Method == "PUT" || len(contentType) > 0 {
+    switch {
+    case strings.Contains(contentType, "form-urlencoded"):
+      ctx.Invoke(Form(obj, ifacePtr...))
+    case strings.Contains(contentType, "multipart/form-data"):
+      ctx.Invoke(MultipartForm(obj, ifacePtr...))
+    case strings.Contains(contentType, "json"): // strings.Contains = BAD
+      ctx.Invoke(Json(obj, ifacePtr...))
+    default:
+      var errors Errors
+      if contentType == "" {
+        errors.Add([]string{}, ERR_CONTENT_TYPE, "Empty Content-Type")
+      } else {
+        errors.Add([]string{}, ERR_CONTENT_TYPE, "Unsupported Content-Type")
+      }
+      ctx.Map(errors)
+      ctx.Map(obj) // Map a fake struct so handler won't panic.
+    }
+  } else {
+    ctx.Invoke(Form(obj, ifacePtr...))
+  }
+}
+```
+
+    This code is the main weakness because:
+
+        1. Grafana requires `application/json`, browsers perform CORS preflight.
+
+        2. CSRF can't be performed because Grafana doesn't respond to CORS preflight.
+
+        3. Attacker sends `plain/text; application/json` as Content-Type, browser interprets `application/json` as a parameter of the essence (application/text).
+
+        4. When Grafana receives the Content-Type, it thinks the request is `application/json`.
+
+        5. CORS preflight was not sent because browser sent `plain/text`, Grafana thought it received `application/json` because of the poor MIME type checker. CSRF was possible because the attacker website can be from the same origin (attacker.example.com grafana.example.com) or SameSite might have been set to none or the user might be using Safari. (and of course Grafana doesn't have an anti-CSRF token)
