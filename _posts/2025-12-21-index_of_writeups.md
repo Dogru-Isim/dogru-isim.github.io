@@ -15,7 +15,8 @@ updated: Dec 23, 2025
 
 ## Learning Resources
 
-1. [Traversal-resistant File](https://go.dev/blog/osroot) APIs by Damien Neil<br>
+1. Traversal-resistant File APIs in Go by Damien Neil<br>
+Link: [Traversal-resistant File APIs](https://go.dev/blog/osroot)<br>
 How to cause path traversal and how to defend against them<br>
 
 # Vulnerability Type 2: CSRF
@@ -24,7 +25,8 @@ How to cause path traversal and how to defend against them<br>
 
 ### 1. Grafana
 
-#### a) [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)
+#### a) CSRF in Grafana
+Link: [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)<br>
 
 Key points:
 
