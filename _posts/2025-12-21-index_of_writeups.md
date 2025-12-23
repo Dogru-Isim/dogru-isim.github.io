@@ -7,8 +7,6 @@ categories: articles
 
 updated: Dec 23, 2025
 
-# Table of Contents
-
 {{ content | toc }}
 
 # Vulnerability Type 1: Path Traversal
