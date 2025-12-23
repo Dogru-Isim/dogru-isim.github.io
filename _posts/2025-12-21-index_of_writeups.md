@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Index of Writeups"
+title: "Index of Cybersecurity Writeups"
 date: 2025-12-22
+updated: 2025-12-23
 categories: articles
 ---
 
