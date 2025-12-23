@@ -5,18 +5,20 @@ date: 2025-12-22
 categories: articles
 ---
 
-# Path Traversal
+# Vulnerability Type: Path Traversal
 
-[Traversal-resistant File](https://go.dev/blog/osroot) APIs by Damien Neil<br>
+## Learning Resources
+
+1. [Traversal-resistant File](https://go.dev/blog/osroot) APIs by Damien Neil<br>
 How to cause path traversal and how to defend against them<br>
 
-# CSRF
+# Vulnerability Type: CSRF
 
-## Grafana
+## Case Studies
 
-https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/
+### Grafana
 
-
+#### [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)
 
 Key points:
 
@@ -32,17 +34,15 @@ Key points:
 
 6. A request with `Content-Type: application/json` is enough to trigger point 6.
    
-   
-   
-   ROOT CAUSE: CORS is triggered if the "essence" of the MIME type is:
-   
-   - `application/x-www-form-urlencoded`,
-   - `multipart/form-data`, or
-   - `text/plain`
-   
-   BUT, if the server checks the MIME type poorly, it can interpret `text/plain; application/json` as a JSON MIME type.
-   
-   The poor MIME type check:
+ROOT CAUSE: CORS is triggered if the "essence" of the MIME type is:
+
+- `application/x-www-form-urlencoded`,
+- `multipart/form-data`, or
+- `text/plain`
+
+BUT, if the server checks the MIME type poorly, it can interpret `text/plain; application/json` as a JSON MIME type.
+
+The poor MIME type check:
 
 ```go
 func bind(ctx *macaron.Context, obj interface{}, ifacePtr ...interface{}) {
