@@ -5,18 +5,18 @@ date: 2025-12-22
 categories: articles
 ---
 
-# Vulnerability Type: Path Traversal
+# Vulnerability Type 1: Path Traversal
 
 ## Learning Resources
 
 1. [Traversal-resistant File](https://go.dev/blog/osroot) APIs by Damien Neil<br>
 How to cause path traversal and how to defend against them<br>
 
-# Vulnerability Type: CSRF
+# Vulnerability Type 2: CSRF
 
 ## Case Studies
 
-### Grafana
+### 1. Grafana
 
 #### [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)
 
