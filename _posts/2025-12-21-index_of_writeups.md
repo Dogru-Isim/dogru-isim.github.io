@@ -24,7 +24,6 @@ How to cause path traversal and how to defend against them<br>
 
 #### a) [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)
 
-<details>
 Key points:
 
 1. Grafana doesn't support CORS
@@ -87,5 +86,3 @@ func bind(ctx *macaron.Context, obj interface{}, ifacePtr ...interface{}) {
         4. When Grafana receives the Content-Type, it thinks the request is `application/json`.
 
         5. CORS preflight was not sent because browser sent `plain/text`, Grafana thought it received `application/json` because of the poor MIME type checker. CSRF was possible because the attacker website can be from the same origin (attacker.example.com grafana.example.com) or SameSite might have been set to none or the user might be using Safari. (and of course Grafana doesn't have an anti-CSRF token)
-
-</details>
