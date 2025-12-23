@@ -18,7 +18,7 @@ How to cause path traversal and how to defend against them<br>
 
 ### 1. Grafana
 
-#### [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)
+#### a) [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)
 
 Key points:
 
