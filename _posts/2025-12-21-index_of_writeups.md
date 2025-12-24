@@ -9,7 +9,15 @@ updated: Dec 23, 2025
 
 {{ content | toc }}
 
-# Vulnerability Type 1: Path Traversal
+# General
+
+## Programming Language Specific Quirks
+
+1. Common Go Mistakes<br>
+Link: [Common Go Mistakes](https://100go.co/)
+Generic Go mistakes (that can cause security bugs imo.)
+
+# Vulnerability Type: Path Traversal
 
 ## Learning Resources
 
@@ -17,7 +25,7 @@ updated: Dec 23, 2025
 Link: [Traversal-resistant File APIs](https://go.dev/blog/osroot)<br>
 How to cause path traversal and how to defend against them<br>
 
-# Vulnerability Type 2: CSRF
+# Vulnerability Type: CSRF
 
 ## Case Studies
 
