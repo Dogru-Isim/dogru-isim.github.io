@@ -15,7 +15,7 @@ updated: Dec 23, 2025
 
 1. Common Go Mistakes<br>
 Link: [Common Go Mistakes](https://100go.co/)
-Generic Go mistakes (that can cause security bugs imo.)
+Generic Go mistakes with example code (that can cause security bugs of course)
 
 # Vulnerability Type: Path Traversal
 
