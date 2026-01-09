@@ -13,16 +13,18 @@ updated: Dec 24, 2025
 
 ## Programming Language Specific Quirks
 
+### Go
 1. Common Go Mistakes<br>
 Link: [Common Go Mistakes](https://100go.co/)
 Generic Go mistakes with example code (that can cause security bugs of course)
 
-2. Curated list of Ruby on Rails vulnerabilities by Brakeman
+### Ruby
+1. Curated list of Ruby on Rails vulnerabilities by Brakeman
 Link: [Brakeman Warning Types](https://brakemanscanner.org/docs/warning_types/)
 Great resource to learn about new vulnerability types and how they can emerge.
 It's original purpose is to document the warnings that the Brakeman static analysis tool gives.
 
-3. Rails send_file - Nginx X-Accel-Redirect Quirk
+2. Rails send_file - Nginx X-Accel-Redirect Quirk
 Link: https://projectdiscovery.io/blog/discourse-backup-disclosure-rails-send_file-quirk
 Haven't read it fully yet, has something to do with X-Accel-Redirect from Nginx being inappropriately used with Rails' send_file. Too tired, brain worksn't
 
