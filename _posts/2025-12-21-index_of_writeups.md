@@ -9,6 +9,8 @@ updated: Dec 24, 2025
 
 {{ content | toc }}
 
+Personal notes, for the public.
+
 # General
 
 ## Programming Language Specific Quirks
