@@ -19,6 +19,7 @@ Personal notes, for the public.
 1. Common Go Mistakes
 
 Link: [Common Go Mistakes](https://100go.co/)
+
 Generic Go mistakes with example code (that can cause security bugs of course)
 
 ### Ruby
