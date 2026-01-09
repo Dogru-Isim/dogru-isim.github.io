@@ -23,14 +23,14 @@ Link: [Common Go Mistakes](https://100go.co/)
 Generic Go mistakes with example code (that can cause security bugs of course)
 
 ### Ruby
-**1- Curated list of Ruby on Rails vulnerabilities by Brakeman**
+**1) Curated list of Ruby on Rails vulnerabilities by Brakeman**
 
 Link: [Brakeman Warning Types](https://brakemanscanner.org/docs/warning_types/)
 
 Great resource to learn about new vulnerability types and how they can emerge.
 It's original purpose is to document the warnings that the Brakeman static analysis tool gives.
 
-**2- List of code patterns that can cause SQLi in Rails applications**
+**2) List of code patterns that can cause SQLi in Rails applications**
 
 Link: [Rails SQLi](https://rails-sqli.org/)
 
