@@ -18,7 +18,7 @@ Link: [Common Go Mistakes](https://100go.co/)
 Generic Go mistakes with example code (that can cause security bugs of course)
 
 2. Curated list of Ruby on Rails vulnerabilities by Brakeman
-Link: [Brakeman Warning Types]https://brakemanscanner.org/docs/warning_types/
+Link: [Brakeman Warning Types](https://brakemanscanner.org/docs/warning_types/)
 Great resource to learn about new vulnerability types and how they can emerge.
 It's original purpose is to document the warnings that the Brakeman static analysis tool gives.
 
