@@ -26,10 +26,6 @@ Link: [Brakeman Warning Types](https://brakemanscanner.org/docs/warning_types/)
 Great resource to learn about new vulnerability types and how they can emerge.
 It's original purpose is to document the warnings that the Brakeman static analysis tool gives.
 
-2. Rails send_file - Nginx X-Accel-Redirect Quirk
-Link: https://projectdiscovery.io/blog/discourse-backup-disclosure-rails-send_file-quirk
-Haven't read it fully yet, has something to do with X-Accel-Redirect from Nginx being inappropriately used with Rails' send_file. Too tired, brain worksn't
-
 # Vulnerability Type: Path Traversal
 
 ## Learning Resources
