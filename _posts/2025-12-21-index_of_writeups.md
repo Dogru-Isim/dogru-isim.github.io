@@ -30,7 +30,7 @@ Link: [Brakeman Warning Types](https://brakemanscanner.org/docs/warning_types/)
 Great resource to learn about new vulnerability types and how they can emerge.
 It's original purpose is to document the warnings that the Brakeman static analysis tool gives.
 
-**2) (Non-Complete) list of code patterns that can cause SQLi in Rails applications**
+**2) (Non-Complete) list of code patterns that can cause SQLi (ORMi) in Rails applications**
 
 Link: [Rails SQLi](https://rails-sqli.org/)
 
