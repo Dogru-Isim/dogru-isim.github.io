@@ -15,7 +15,7 @@ Personal notes, for the public.
 
 ## Programming Language Specific Quirks
 
-<<<<<<< HEAD
+### Go
 1. Common Go Mistakes<br>
 Link: [Common Go Mistakes](https://100go.co/)<br>
 Generic Go mistakes with example code (that can cause security bugs of course)<br>
@@ -28,7 +28,7 @@ Security problems that can arise from unexpected parser behaviors in Go<br>
 
 ### Parser Differentials
 
-1. Bypassing SAML Authentication by Abusing Parser Differentials
+**1. Bypassing SAML Authentication by Abusing Parser Differentials**
 Link: [Bypassing SAML Authentication by Abusing Parser Differentials](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/)<br>
 A very technical writeup that illustrates how we can abuse Parser Differentials. Goes deep into SAML, XML, and signatures.
 This is a nice read about abusing software schemes that read the same data using 2 different implementations. (interoperability vulnerabilities)
@@ -39,25 +39,18 @@ Featuring:
 - Case Insensitivity
 - Data Format Confusion
 
-2. How to Exploit Parser Differentials by Gitlab
+**2. How to Exploit Parser Differentials by Gitlab**
 Link: [How to Exploit Parser Differentials](https://about.gitlab.com/blog/how-to-exploit-parser-differentials/)
 It's about parser differentials, its by Gitlab, it must be guud.
 
 # Vulnerability Type: ORM Leak
 
-1. Ransacking Your Password Reset Tokens
+**1. Ransacking Your Password Reset Tokens**
 Link: [Ransacking Your Password Reset Tokens](https://positive.security/blog/ransack-data-exfiltration)
 One of the first articles about ORM leaks; an ORM leak vulnerability in the Ruby library "Ransack"
 
-2. Plorming Your Django ORM
+**2. Plorming Your Django ORM**
 Link: [Plorming Your Django ORM](https://www.elttam.com/blog/plormbing-your-django-orm/)
-
-### Go
-**1) Common Go Mistakes**
-
-Link: [Common Go Mistakes](https://100go.co/)
-
-Generic Go mistakes with example code (that can cause security bugs of course)
 
 ### Ruby
 **1) Curated list of Ruby on Rails vulnerabilities by Brakeman**
