@@ -91,7 +91,7 @@ This rule creates an alert with High severity when msiexec is executed with cert
 ![msiexec-alert](/assets/images/2026-02-5-purple_teaming_1_configuring_and_elastic_rule_and_bypassing_it/25_siem_caught_msiexec.png)
 (example alert)
 
-As you can see, the ones that didn't have "zoom.us/client" in the command can be detected using this rule. However, this rule failed to generate an alert when "zoom.us/client/" was used as part of the remote url path. At this point, a SOC engineer either needs to remove this exclusion from the rule, or fine-tune it (along with some of the other exclusions) to be more precise like "https://zoom.us/client\*".
+As you can see, the ones that didn't have "zoom.us/client" in the command can be detected using this rule. However, this rule failed to generate an alert when "zoom.us/client" was used as part of the remote url path. At this point, a SOC engineer either needs to remove this exclusion from the rule, or fine-tune it (along with some of the other exclusions) to be more precise like "https://zoom.us/client\*".
 
 I should also point out that this variation of the payload was still logged but didn't cause an alert, there is no real reason for a SOC analyst to dive into random logs therefore we can assume that an attacker using this bypass technique would be undetected. You can see the generated log in the below image.
 
