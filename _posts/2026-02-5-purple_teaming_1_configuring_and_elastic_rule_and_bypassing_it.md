@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Defensive Security 1: Implementing, Bypassing, and Fixing a Pre-built Elastic SIEM Rule"
+title: "Detection Engineering 1: Implementing, Bypassing, and Fixing a Pre-built Elastic SIEM Rule"
 date: 2026-02-05
 categories: articles
 ---
