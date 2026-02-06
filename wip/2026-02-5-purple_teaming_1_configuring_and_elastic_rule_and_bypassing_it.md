@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Purple Teaming: Implementing an Elastic SIEM Rule and Bypassing It"
+title: "Defensive Security 1: Implementing, Bypassing, and Fixing a Builtin Elastic SIEM Rule"
 date: 2026-02-05
 categories: articles
 ---
