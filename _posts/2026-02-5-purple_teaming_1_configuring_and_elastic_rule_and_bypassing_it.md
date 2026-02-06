@@ -67,13 +67,13 @@ For this side-project of mine, I decided to look at MSI installer based initial 
 
 [2.9] https://www.youtube.com/watch?v=r9SWkGPlJWM
 
-[2.10] https://www.elastic.co/guide/en/security/8.19/potential-remote-install-via-msiexec.html
+[2.10] https://www.google.com/search?q=msiexec+malware+campaign
 
-[2.11] https://www.google.com/search?q=msiexec+malware+campaign
+[2.11] https://www.elastic.co/guide/en/security/8.19/potential-remote-install-via-msiexec.html
 
 ## Detection Rule: Potential Remote Install via Msiexec
 
-According to the above source [2.10] , this rule is built with generative AI and has been reviewed (although we don't know who or what reviewed it). It's job is described as "Identifies attempts to install a file from a remote server using MsiExec. Adversaries may abuse Windows Installers for initial access and delivery of malware." It's severity is High and is implemented with the following EQL query.
+According to the above source [2.11] , this rule is built with generative AI and has been reviewed (although we don't know who or what reviewed it). It's job is described as "Identifies attempts to install a file from a remote server using MsiExec. Adversaries may abuse Windows Installers for initial access and delivery of malware." It's severity is High and is implemented with the following EQL query.
 
 ```eql
 process where host.os.type == "windows" and event.type == "start" and
