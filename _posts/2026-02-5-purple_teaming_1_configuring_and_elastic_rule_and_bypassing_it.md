@@ -26,9 +26,13 @@ Elastic SIEM requires detection rules to operate reliably. Therefore, security t
 In this post, I share my experience with installing one of these detection rules and my efforts to bypass it. I believe this is a fantastic exercise to build purple teaming skills and understand security as a whole.
 
 [1.0] https://www.elastic.co/customers
+
 [1.1] https://www.devopsschool.com/blog/what-is-elastic-agents-its-feature-and-how-it-works/
+
 [1.2] https://www.elastic.co/guide/en/integrations/current/index.html
+
 [1.3] https://www.elastic.co/guide/en/security/current/prebuilt-rules.html
+
 [1.4] https://www.elastic.co/docs/reference/security/prebuilt-rules/rules/integrations/dga/command_and_control_ml_dga_high_sum_probability#triage-and-analysis
 
 # Bypassing a Detection Rule
@@ -42,15 +46,25 @@ Anyways, my point is that threat actors and red teamers need to decide which ini
 For this side-project of mine, I decided to look at MSI installer based initial access techniques. Mainly because they are easy to make a PoC with and are somewhat common. Elastic SIEM provides a few detection rules for identifying malicious usage of msiexec. One of them is the "Potential Remote Install via Msiexec [2.10]"
 
 [2.0] https://mc.merill.net/message/MC1221452
+
 [2.1] https://www.youtube.com/watch?v=xdl08cPDgtE
+
 [2.2] https://www.youtube.com/watch?v=GG4gAhbhPH8
+
 [2.3] https://www.reddit.com/r/programming/comments/1dcz9uj/malicious_vscode_extensions_with_millions_of/
+
 [2.4] https://www.youtube.com/watch?v=AAiiIY-Soak
+
 [2.5] https://vicone.com/blog/phishing-beyond-emails-how-compromised-installers-threaten-automotive-software-supply-chains
+
 [2.6] https://www.trellix.com/blogs/research/oneclik-a-clickonce-based-red-team-campaign-simulating-apt-tactics-in-energy-infrastructure/
+
 [2.7] https://www.google.com/search?client=firefox-b-lm&q=hp-wolf-security-threat-insights-report
+
 [2.8] https://www.coro.net/blog/why-usb-attacks-are-back-and-how-to-prevent-them
+
 [2.9] https://www.youtube.com/watch?v=r9SWkGPlJWM
+
 [2.10] https://www.elastic.co/guide/en/security/8.19/potential-remote-install-via-msiexec.html
 
 ## Detection Rule: Potential Remote Install via Msiexec
