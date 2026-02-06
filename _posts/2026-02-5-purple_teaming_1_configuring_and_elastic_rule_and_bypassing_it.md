@@ -45,7 +45,7 @@ It's also remarkable that cybersecurity solutions are becoming increasingly reli
 
 Anyways, my point is that threat actors and red teamers need to decide which initial access technique they will choose which means I need to choose an initial access technique as well.
 
-For this side-project of mine, I decided to look at MSI installer based initial access techniques. Mainly because they are easy to make a PoC with and are somewhat common. Elastic SIEM provides a few detection rules for identifying malicious usage of msiexec. One of them is the "Potential Remote Install via Msiexec [2.10]"
+For this side-project of mine, I decided to look at MSI installer based initial access techniques. Mainly because they are easy to make a PoC with and are somewhat common [2.10]. Elastic SIEM provides a few detection rules for identifying malicious usage of msiexec. One of them is the "Potential Remote Install via Msiexec [2.11]"
 
 [2.0] https://mc.merill.net/message/MC1221452
 
@@ -61,13 +61,15 @@ For this side-project of mine, I decided to look at MSI installer based initial 
 
 [2.6] https://www.trellix.com/blogs/research/oneclik-a-clickonce-based-red-team-campaign-simulating-apt-tactics-in-energy-infrastructure/
 
-[2.7] https://www.google.com/search?client=firefox-b-lm&q=hp-wolf-security-threat-insights-report
+[2.7] https://www.google.com/search?q=hp-wolf-security-threat-insights-report
 
 [2.8] https://www.coro.net/blog/why-usb-attacks-are-back-and-how-to-prevent-them
 
 [2.9] https://www.youtube.com/watch?v=r9SWkGPlJWM
 
 [2.10] https://www.elastic.co/guide/en/security/8.19/potential-remote-install-via-msiexec.html
+
+[2.11] https://www.google.com/search?q=msiexec+malware+campaign
 
 ## Detection Rule: Potential Remote Install via Msiexec
 
