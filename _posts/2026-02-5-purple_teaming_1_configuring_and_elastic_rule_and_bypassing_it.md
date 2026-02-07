@@ -25,6 +25,7 @@ Elastic SIEM requires detection rules to operate reliably. Therefore, security t
 
 In this post, I share my experience with installing one of these detection rules and my efforts to bypass it. I believe this is a fantastic exercise to build purple teaming skills and understand security as a whole.
 
+
 [1.0] https://www.elastic.co/customers
 
 [1.1] https://www.devopsschool.com/blog/what-is-elastic-agents-its-feature-and-how-it-works/
@@ -48,6 +49,7 @@ It's also remarkable that cybersecurity solutions are becoming increasingly reli
 Anyways, my point is that threat actors and red teamers need to decide which initial access technique they will choose which means I need to choose an initial access technique as well.
 
 For this side-project of mine, I decided to look at MSI installer based initial access techniques. Mainly because they are easy to make a PoC with and are somewhat common [2.10]. Elastic SIEM provides a few detection rules for identifying malicious usage of msiexec. One of them is the "Potential Remote Install via Msiexec [2.11]"
+
 
 [2.0] https://mc.merill.net/message/MC1221452
 
