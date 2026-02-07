@@ -142,7 +142,7 @@ END UPDATE
 
 # Conclusion
 
-This small research points out the importance of well-thought defensive engineering and how of adversarial thinking plays a role in that.
+This small research points out the importance of well-thought defense engineering and how adversarial thinking plays a role in that.
 
 As a beginner in defensive security, this side-project helped me to gain more insight into the intricate world of SOC. My only regret is how much time I spent just failing to setup Elastic. Regardless, I recommend anyone interested in blue teaming or red teaming do this project as well. Any red teamer should understand the SOC's side of things and any blue teamer should be familiar with detection rules, false-positives, and false-negatives.
 
