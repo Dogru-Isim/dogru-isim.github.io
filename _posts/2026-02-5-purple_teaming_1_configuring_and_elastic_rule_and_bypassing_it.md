@@ -11,7 +11,7 @@ categories: articles
 
 ## Content
 
-In this post, I share my experiences with Elastic SIEM. Specifically, integrating a prebuilt Elastic SIEM rule, finding ways to bypass it, and improving the rule.
+In this post I share some of my experiences with Elastic SIEM. More specifically, integrating a prebuilt Elastic SIEM rule, finding ways to bypass it, and improving the rule.
 
 ## Background
 
