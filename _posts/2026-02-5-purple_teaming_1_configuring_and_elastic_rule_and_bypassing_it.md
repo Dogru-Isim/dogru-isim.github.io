@@ -35,7 +35,7 @@ In this post, I share my experience with installing one of these detection rules
 
 [1.4] https://www.elastic.co/docs/reference/security/prebuilt-rules/rules/integrations/dga/command_and_control_ml_dga_high_sum_probability#triage-and-analysis
 
-# Bypassing a Detection Rule
+# Engineering a Detection Rule
 
 ## Some Rant
 
