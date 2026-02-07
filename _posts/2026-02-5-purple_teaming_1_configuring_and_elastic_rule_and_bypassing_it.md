@@ -138,6 +138,8 @@ process where host.os.type == "windows" and event.type == "start" and
   not process.command_line : "*/g*https://zoom.us/client/*")
 ```
 
+END UPDATE
+
 # Conclusion
 
 This small research points out the importance of well-thought defensive engineering and how of adversarial thinking plays a role in that.
