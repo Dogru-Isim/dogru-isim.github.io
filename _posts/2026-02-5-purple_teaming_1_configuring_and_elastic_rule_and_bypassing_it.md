@@ -73,7 +73,7 @@ For this side-project of mine, I decided to look at MSI installer based initial 
 
 [2.10] https://www.google.com/search?q=msiexec+malware+campaign
 
-[2.11] https://thehackernews.com/2025/10/hackers-turn-velociraptor-dfir-tool.html
+[2.11] https://thehackernews.com/2025/08/attackers-abuse-velociraptor-forensic.html
 
 [2.12] https://www.elastic.co/guide/en/security/8.19/potential-remote-install-via-msiexec.html
 
