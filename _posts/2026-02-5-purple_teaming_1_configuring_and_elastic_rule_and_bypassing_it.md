@@ -135,7 +135,7 @@ The following is an improvement to the improvement. It can be extended to accoun
 
 ```eql
 process where host.os.type == "windows" and event.type == "start" and
-  process.name : "msiexec.exe" and process.args : ("-i", "/i") and process.command_line : ("*http*", "\\\\") and
+  process.name : "msiexec.exe" and process.args : ("-i", "/i") and process.command_line : ("*http*", "*\\\\*") and
   process.args : ("/qn", "-qn", "-q", "/q", "/quiet") and
   process.parent.name : ("sihost.exe", "explorer.exe", "cmd.exe", "wscript.exe", "mshta.exe", "powershell.exe", "wmiprvse.exe", "pcalua.exe", "forfiles.exe", "conhost.exe") and
   not (process.args : "https://zoom.us/client/*" and
