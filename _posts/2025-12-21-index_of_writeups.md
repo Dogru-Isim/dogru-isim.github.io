@@ -5,8 +5,6 @@ date: 2025-12-21
 categories: articles
 ---
 
-updated: Dec 24, 2025
-
 {{ content | toc }}
 
 Personal notes, for the public.
@@ -43,7 +41,9 @@ Featuring:
 Link: [How to Exploit Parser Differentials](https://about.gitlab.com/blog/how-to-exploit-parser-differentials/)
 It's about parser differentials, its by Gitlab, it must be guud.
 
-# Vulnerability Type: ORM Leak
+# Vulnerability Types
+
+## Vulnerability Type: ORM Leak
 
 **1. Ransacking Your Password Reset Tokens**
 Link: [Ransacking Your Password Reset Tokens](https://positive.security/blog/ransack-data-exfiltration)
@@ -66,21 +66,21 @@ Link: [Rails SQLi](https://rails-sqli.org/)
 
 Found this resource while investigating CVE-2021-43830. The subtle behavior in the `exists` method had to be documented somewhere...
 
-# Vulnerability Type: Path Traversal
+## Vulnerability Type: Path Traversal
 
-## Learning Resources
+### Learning Sources
 
 1. Traversal-resistant File APIs in Go by Damien Neil<br>
 Link: [Traversal-resistant File APIs](https://go.dev/blog/osroot)<br>
 How to cause path traversal and how to defend against them<br>
 
-# Vulnerability Type: CSRF
+## Vulnerability Type: CSRF
 
-## Case Studies
+### Case Studies
 
-### 1. Grafana CSRF
+#### 1. Grafana CSRF
 
-#### a) CSRF in Grafana
+##### a) CSRF in Grafana
 Link: [CSRF in Grafana](https://jub0bs.com/posts/2022-02-08-cve-2022-21703-writeup/)<br>
 
 Key points:
@@ -146,7 +146,7 @@ func bind(ctx *macaron.Context, obj interface{}, ifacePtr ...interface{}) {
 
         5. CORS preflight was not sent because browser sent `plain/text`, Grafana thought it received `application/json` because of the poor MIME type checker. CSRF was possible because the attacker website can be from the same origin (attacker.example.com grafana.example.com) or SameSite might have been set to none or the user might be using Safari. (and of course Grafana doesn't have an anti-CSRF token)
 
-### 2. GitHub CSRF
+#### 2. GitHub CSRF
 Link: https://blog.teddykatz.com/2019/11/05/github-oauth-bypass.html
 
 CSRF in GitHub's OAuth implementation. The problem is caused by the fact that Rails (and some other frameworks) treats HEAD requests as GET requests during routing. This means, that HEAD requests are passed to the same controller as GET requests would. Example:
@@ -169,3 +169,6 @@ end
 This becomes a problem if the controller does not explicitly check if the incoming request is a POST request like above. Many routes are implement in a way that allows a single path in a URL to perform different actions based on the POST. This behavior is made possible with controller level checks like above.
 
 GitHub requires POST requests to have a CSRF token to prevent CSRF attacks. This happens in a middleware I believe, it cannot be in the controller otherwise this vulnerability wouldn't be possible. The writer doesn't say where this check happens (edit: it's Rails' default CSRF protection), but when a HEAD request reaches the above controller, it gets treated as a POST request that checks the middleware that requires CSRF token in POST requests. It doesn't bypass the authentication middleware, I think, because the GET request also requires authentication. But there is a possibility that POST requests require authentication and GET request do not. This could make it possible to even bypass authentication. (GET and HEAD requests can have a body too, and this body would get processed in the POST request logic.)
+
+
+updated: Dec 24, 2025

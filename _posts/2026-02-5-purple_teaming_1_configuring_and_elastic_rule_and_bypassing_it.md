@@ -48,7 +48,7 @@ It's also remarkable that cybersecurity solutions are becoming increasingly reli
 
 Anyways, my point is that threat actors and red teamers need to decide which initial access technique they will choose which means I need to choose an initial access technique as well.
 
-For this side-project of mine, I decided to look at MSI installer based initial access techniques. Mainly because they are easy to make a PoC with and are somewhat common [2.10]. Elastic SIEM provides a few detection rules for identifying malicious usage of msiexec. One of them is the "Potential Remote Install via Msiexec [2.11]"
+For this side-project of mine, I decided to look at MSI installer based initial access techniques. Mainly because they are easy to make a PoC with and are somewhat common [2.10] [2.11]. Elastic SIEM provides a few detection rules for identifying malicious usage of msiexec. One of them is the "Potential Remote Install via Msiexec [2.12]"
 
 
 [2.0] https://mc.merill.net/message/MC1221452
@@ -73,7 +73,9 @@ For this side-project of mine, I decided to look at MSI installer based initial 
 
 [2.10] https://www.google.com/search?q=msiexec+malware+campaign
 
-[2.11] https://www.elastic.co/guide/en/security/8.19/potential-remote-install-via-msiexec.html
+[2.11] https://thehackernews.com/2025/08/attackers-abuse-velociraptor-forensic.html
+
+[2.12] https://www.elastic.co/guide/en/security/8.19/potential-remote-install-via-msiexec.html
 
 ## Detection Rule: Potential Remote Install via Msiexec
 
@@ -135,7 +137,7 @@ The following is an improvement to the improvement. It can be extended to accoun
 
 ```eql
 process where host.os.type == "windows" and event.type == "start" and
-  process.name : "msiexec.exe" and process.args : ("-i", "/i") and process.command_line : ("*http*", "\\\\") and
+  process.name : "msiexec.exe" and process.args : ("-i", "/i") and process.command_line : ("*http*", "*\\\\*") and
   process.args : ("/qn", "-qn", "-q", "/q", "/quiet") and
   process.parent.name : ("sihost.exe", "explorer.exe", "cmd.exe", "wscript.exe", "mshta.exe", "powershell.exe", "wmiprvse.exe", "pcalua.exe", "forfiles.exe", "conhost.exe") and
   not (process.args : "https://zoom.us/client/*" and
